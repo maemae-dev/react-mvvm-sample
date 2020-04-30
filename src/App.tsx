@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { CountStore } from "./store/CountStore";
+import { CountContext } from "./context/CountContext";
+import { Label } from "./Label";
+import { Button } from "./Button";
 
 function App() {
+  const store = CountStore();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CountContext.Provider value={store}>
+        <Label />
+        <Button />
+      </CountContext.Provider>
     </div>
   );
 }
