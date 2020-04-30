@@ -1,7 +1,7 @@
 import { ICountViewModel } from "../context/CountContext";
 import { useState } from "react";
 
-export const CountStore = (): ICountViewModel => {
+export const CountViewModel = (): ICountViewModel => {
   const [count, setCount] = useState<number>(0);
 
   const increment = () => {

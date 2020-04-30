@@ -1,11 +1,11 @@
 import React from "react";
-import { CountStore } from "./store/CountStore";
+import { CountViewModel } from "./viewModel/CountViewModel";
 import { CountContext } from "./context/CountContext";
 import { Label } from "./Label";
 import { Button } from "./Button";
 
 function App() {
-  const store = CountStore();
+  const store = CountViewModel();
   return (
     <div className="App">
       <CountContext.Provider value={store}>
